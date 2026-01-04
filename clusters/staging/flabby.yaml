@@ -4,8 +4,8 @@ metadata:
   creationTimestamp: null
   namespace: default
   labels:
-    run: tester
-  name: tester
+    run: flabby
+  name: flabby
 spec:
   containers:
   - image: nginx
