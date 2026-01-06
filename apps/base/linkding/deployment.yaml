@@ -20,7 +20,6 @@ spec:
           volumeMounts:
             - name: linkding-pvc
               mountPath: /linkdingPVC
-
       volumes:
         - name: linkding-pvc
           persistentVolumeClaim:
