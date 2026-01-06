@@ -12,11 +12,21 @@ spec:
       labels:
         app: linkding
     spec:
+      securityContext:
+        fsGroup: 33 # www-data group ID. 
+        runAsUser: 33 # www-data group ID
+        runAsGroup: 33 # www-data group ID
+  # look at docker files to documentation on the users
+  # look for users/profiles to secure in the dockerfile
       containers:
         - name: linkding
           image: sissbruecker/linkding:1.31.0
           ports:
             - containerPort: 9090
+
+          securityContxt:        #  <------
+            allowPrivilegeEscalation: false   #  <----
+
           volumeMounts:
             - name: linkding-data
               mountPath: /etc/linkding/data
