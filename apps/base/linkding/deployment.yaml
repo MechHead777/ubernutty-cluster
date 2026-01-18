@@ -27,6 +27,11 @@ spec:
           securityContxt:        #  <------
             allowPrivilegeEscalation: false   #  <----
 
+
+          envFrom:
+            secretRef:
+              name: linkding-signin
+
           volumeMounts:
             - name: linkding-data
               mountPath: /etc/linkding/data
