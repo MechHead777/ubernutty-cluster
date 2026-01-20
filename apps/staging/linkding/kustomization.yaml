@@ -7,3 +7,4 @@ resources:
 #  - test-secret.yaml
   - tunnel-secret.yaml
   - linkding-secret.yaml
+  - ingress.yaml
