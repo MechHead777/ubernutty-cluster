@@ -34,15 +34,11 @@ spec:
       ingress:
         enabled: true
         ingressClassName: traefik
-        # serviceName: kube-prometheus-stack-alertmanager-0
         hosts:
           - grs.mechhead777.com
-
-        ## TLS configuration for Alertmanager Ingress
-        ## Secret must be manually created in the namespace
-        ##
-        tls: []
-        # - secretName: alertmanager-general-tls
-        #   hosts:
-        #   - alertmanager.example.com
+        tls:
+          - secretName: grafana-tls-secret
+            hosts:
+              - grs.mechhead777.com
+            
 
