@@ -39,6 +39,8 @@ spec:
           volumeMounts:
             - name: audiobookshelf-data
               mountPath: /etc/audiobookshelf/data
+            - name: temp-data
+              mountPath: /mnt
       volumes:
 #        - name: audiobookshelf-data
 #          persistentVolumeClaim:
