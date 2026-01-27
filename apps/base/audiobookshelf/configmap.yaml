@@ -4,6 +4,5 @@ metadata:
   name: audiobookshelf-configmap
   namespace: audiobookshelf
 data:
-#  RENOVATE_AUTODISCOVER: "false"
   TZ: "America/Chicago"
-  PORT: "3005"
+  PORT: "3005"   # had to troubleshoot this one

@@ -36,10 +36,14 @@ spec:
 #           - secretRef:
 #               name: linkding-signin
 # 
-#           volumeMounts:
-#             - name: audiobookshelf-data
-#               mountPath: /etc/audiobookshelf/data
-#       volumes:
-#         - name: audiobookshelf-data
-#           persistentVolumeClaim:
-#             claimName: audiobookshelf-data-pvc
+          volumeMounts:
+            - name: audiobookshelf-data
+              mountPath: /etc/audiobookshelf/data
+      volumes:
+#        - name: audiobookshelf-data
+#          persistentVolumeClaim:
+#            claimName: audiobookshelf-data-pvc
+        - name: temp-mount
+          hostPath:
+            path: /data/audiofiles
+            type: directory
