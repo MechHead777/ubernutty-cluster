@@ -6,3 +6,4 @@ metadata:
 data:
 #  RENOVATE_AUTODISCOVER: "false"
   TZ: "America/Chicago"
+  PORT: "3005"
