@@ -12,10 +12,10 @@ spec:
       labels:
         app: audiobookshelf
     spec:
-#      securityContext:
-#        fsGroup: 33 # www-data group ID. 
-#        runAsUser: 33 # www-data group ID
-#        runAsGroup: 33 # www-data group ID
+      securityContext:
+        fsGroup: 1000 # www-data group ID. 
+        runAsUser: 1000 # www-data group ID
+        runAsGroup: 1000 # www-data group ID
   # look at docker files to documentation on the users
   # look for users/profiles to secure in the dockerfile
       containers:
@@ -26,6 +26,7 @@ spec:
 
 #          securityContxt:        #  <------
 #            allowPrivilegeEscalation: false   #  <----
+
 
 
           envFrom:
@@ -50,9 +51,6 @@ spec:
               mountPath: /metadata
               subPath: metadata
 
-
-
-
 #            - name: audiobooks
 #              mountPath: /audiobooks
 #            - name: podcasts
@@ -61,10 +59,13 @@ spec:
 #              mountPath: /config
 #            - name: metadata
 #              mountPath: /metadata
+              
+                                          
       volumes:
         - name: audiobookshelf-data
           persistentVolumeClaim:
             claimName: audiobookshelf-data-pvc
+
 #        - name: audiobooks
 #          hostPath:
 #            path: /data/audiobookshelf/audiobooks
