@@ -38,22 +38,22 @@ spec:
 # 
           volumeMounts:
             - name: audiobookshelf-data
-              mountPath: /etc/audiobookshelf/data
+              mountPath: /home/node/data
             - name: audiobooks
-              mountPath: /data/audiobookshelf/audiobooks
+              mountPath: /home/node/audiobooks
             - name: podcasts
-              mountPath: /data/audiobookshelf/podcasts
+              mountPath: /home/node/podcasts
             - name: config
-              mountPath: /data/audiobookshelf/config
+              mountPath: /home/node/config
             - name: metadata
-              mountPath: /data/audiobookshelf/metadata
+              mountPath: /home/node/metadata
       volumes:
 #        - name: audiobookshelf-data
 #          persistentVolumeClaim:
 #            claimName: audiobookshelf-data-pvc
         - name: audiobooks
           hostPath:
-            path: /data/audiobookshelf
+            path: /data/audiobooks
             type: directory
         - name: podcasts
           hostPath:
