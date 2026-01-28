@@ -53,17 +53,17 @@ spec:
 #            claimName: audiobookshelf-data-pvc
         - name: audiobooks
           hostPath:
-            path: /data/audiobooks
+            path: /data/audiobookshelf/audiobooks
             type: Directory
         - name: podcasts
           hostPath:
-            path: /data/podcasts
+            path: /data/audiobookshelf/podcasts
             type: Directory
         - name: config
           hostPath:
-            path: /data/config
+            path: /data/audiobookshelf/config
             type: Directory
         - name: metadata
           hostPath:
-            path: /data/metadata
+            path: /data/audiobookshelf/metadata
             type: Directory
