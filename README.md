@@ -1,5 +1,27 @@
-Thanks for checking out my repo!
+# homelab
 
-I'm increasing my Kubernetes/DevOps/SRE skillset every day.
+Production-inspired Kubernetes homelab managed with GitOps principles.
 
-Terraform is up next!
+This repository contains the manifests, infrastructure configuration, and automation powering a self-hosted Kubernetes environment.
+
+## Tooling
+
+| Category | Stack |
+|---|---|
+| GitOps | FluxCD |
+| Secrets | SOPS + age |
+| Monitoring | Prometheus + Grafana |
+| Automation | Renovate |
+| Services | Linkding, Audiobookshelf |
+
+## Design Principles
+
+- Git as the source of truth
+- Declarative infrastructure
+- Encrypted secrets
+- Automated maintenance
+- Observable systems
+
+## Notes
+
+This environment is intentionally used to experiment with Kubernetes operations, automation workflows, and self-hosted services.
