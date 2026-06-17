@@ -1,4 +1,4 @@
-# homelab
+# HomeOps
 
 Production-inspired Kubernetes homelab managed with GitOps principles.
 
