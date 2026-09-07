@@ -20,7 +20,7 @@ spec:
   # look for users/profiles to secure in the dockerfile
       containers:
         - name: linkding
-          image: sissbruecker/linkding:1.45.0
+          image: sissbruecker/linkding:1.46.2
           ports:
             - containerPort: 9090
 
