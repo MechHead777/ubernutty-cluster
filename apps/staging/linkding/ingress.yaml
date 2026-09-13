@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: lds.mechhead777.com 
+    - host: lds.lan.mechhead777.com 
       http:
         paths:
           - backend:
